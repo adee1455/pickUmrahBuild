@@ -6,7 +6,7 @@ export default function Navbar() {
 
 
 
-<nav class="border-gray-200 bg-white dark:border-gray-700">
+<nav class=" bg-white dark:border-gray">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-center md:justify-center lg:justify-between  mx-auto p-4">
     <a href="#" class="flex items-center  rtl:space-x-reverse">
         <img src="/PICKUMRAH.png" class="h-[5rem]" alt=" Logo" />

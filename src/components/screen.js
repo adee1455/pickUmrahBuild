@@ -31,7 +31,7 @@ export default function Screen() {
       
      <div className="w-full h-screen bg-white  ">
       
-     <div className=" h-1/2 flex flex-col text-center justify-center items-center text-black sm:p-0 p-7 ">
+     {/* <div className=" h-1/2 flex flex-col text-center justify-center items-center text-black sm:p-0 p-7 ">
           <h2 class="mb-4 text-3xl tracking-normal font-bold text-gray-900 sm:text-4xl dark:text-black">    We are launching soon...</h2>
           <p class="mx-auto mb-8 max-w-2xl font-light text-gray-800 md:mb-12 sm:text-lg dark:text-gray-700">Stay up to date with the progress, announcements and exclusive discounts feel free to sign up with your email.</p>
           <form action="#" id="form" onSubmit={handleSubmit}>
@@ -48,7 +48,7 @@ export default function Screen() {
                   </div>
               </div>
           </form>
-      </div>
+      </div> */}
   </div>
 
   </div>
