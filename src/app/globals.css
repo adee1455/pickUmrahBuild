@@ -25,6 +25,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
 }
 
 @layer utilities {
@@ -39,7 +40,7 @@ body {
   font-weight: normal;
   background: var(--surface-ground);
   color: var(--text-color);
-  padding: 1rem;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -47,9 +48,9 @@ body {
 .card {
   background: white;
   color:black;
-  width: auto;
+  width: 100%;
   height: auto;
-  border-right: 1px solid black;
+  /* border-right: 1px solid black; */
   height: 40px;
 }
 

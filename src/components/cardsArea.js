@@ -11,11 +11,17 @@ export default function CardsArea(){
     
     
     return(
-        <div className=" h-auto ">
+        <div className=" h-auto w-full flex flex-col justify-center pt-10 ">
             
-            <div>
+             <div className="flex justify-center flex-col mx-auto">
                 <Card/>
-            </div>
+                <br />
+                <Card/>
+                <br />
+                <Card/>
+                <br />
+                <Card/>
+             </div>
 
         </div>
 
