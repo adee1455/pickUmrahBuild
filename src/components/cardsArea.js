@@ -25,7 +25,7 @@ export default function CardsArea(){
       };
     
     return(
-        <div className=" h-auto w-full flex flex-col justify-center pt-10 ">
+        <div className=" h-auto w-full flex flex-col justify-center pt-5 ">
             
              <div className="flex justify-center flex-col mx-auto">
            {cards.map((card) => (
