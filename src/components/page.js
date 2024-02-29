@@ -28,7 +28,7 @@ export function Page() {
               <span className="">14 Sep</span>
             </div>
 
-            <div className="w-80">
+            <div className="w-52">
                 <p className="md:text-lg text-sm md:pl-3">Departure Location: Mumbai</p>
             </div>
           </div>
@@ -96,7 +96,7 @@ function PriceBox(){
   return(
     (
 
-      <Card className="w-3xl right-10 md:flex flex-col py-5  font-sans ">
+      <Card className="w-3xl right-10 md:flex flex-col py-5 font-sans ">
       <CardHeader>
         <CardTitle className="tracking-wide">Pricing</CardTitle>
       </CardHeader>
