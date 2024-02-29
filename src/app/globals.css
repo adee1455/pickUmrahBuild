@@ -25,7 +25,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-
+   background-color: white;
 }
 
 @layer utilities {
@@ -40,7 +40,7 @@ body {
   font-weight: normal;
   background: var(--surface-ground);
   color: var(--text-color);
-  
+  background-color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

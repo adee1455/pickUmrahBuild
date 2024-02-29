@@ -57,7 +57,7 @@ export default function Bar() {
   <div className="flex">
       <div className="flex flex-1 justify-center sm:justify-end mt-0 sm:mt-0">
         <Select className="w-full sm:w-auto ">
-          <SelectTrigger id="sort" className="text-black  w-[174px] pt-6 sm:w-48">
+          <SelectTrigger id="sort" className="text-black  w-[174px] lg:pt-3 pt-6 sm:w-48">
             <SelectValue placeholder="Sort" />
           </SelectTrigger>
           <SelectContent position="popper">

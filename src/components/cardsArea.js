@@ -1,6 +1,7 @@
 "use client";
 import Card from "./card";
 import {React,useEffect,useState} from "react";
+import TourTitle from "./detailsPage";
 
 
 
@@ -25,7 +26,7 @@ export default function CardsArea(){
       };
     
     return(
-        <div className=" h-auto w-full flex flex-col justify-center pt-5 ">
+        <div className=" h-auto w-full flex bg-white flex-col justify-center pt-5 ">
             
              <div className="flex justify-center flex-col mx-auto">
            {cards.map((card) => (
@@ -51,10 +52,12 @@ export default function CardsArea(){
                 madinahDist={card.madinahdist}
                 
               />
+  
             </>
           ))}
+          
              </div>
-
+            
         </div>
 
     )};
