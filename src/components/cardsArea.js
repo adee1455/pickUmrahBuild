@@ -1,7 +1,7 @@
 "use client";
 import Card from "./card";
 import {React,useEffect,useState} from "react";
-import TourTitle from "./detailsPage";
+
 
 
 
@@ -29,7 +29,7 @@ export default function CardsArea(){
         <div className=" h-auto w-full flex bg-white flex-col justify-center pt-5 ">
             
              <div className="flex justify-center flex-col mx-auto">
-           {cards.map((card) => (
+             {cards.map((card) => (
             <>
               
               <Card

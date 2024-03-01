@@ -1,15 +1,11 @@
 "use client";
 
-import Title from "@/components/heroTitle";
+
 import Navbar from "@/components/navbar";
-
-
 import {React,useEffect,useState} from "react";
 import Page from "@/components/page";
 import Footer from "@/components/footer";
-import { Hotel } from "lucide-react";
-import Hotels from "@/components/hotels";
-import PriceBox from "@/components/priceBox";
+
 
 
 
@@ -36,7 +32,7 @@ const getData = async () => {
 };
 
 // Define your condition for selecting a specific item
-const selectedTour = data.find(item => item.tourname === "AL-KHALID TOURS" );
+const selectedTour = data.find(item => item.tourname === "ROSHAN TOURS" );
 
     return (
       <div>
