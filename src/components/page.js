@@ -28,7 +28,7 @@ export function Page() {
               <span className="">14 Sep</span>
             </div>
 
-            <div className="md:w-auto ">
+            <div className="md:w-auto w-52 ">
                 <p className="md:text-lg text-sm md:pl-3">Departure Location: Mumbai</p>
             </div>
           </div>
