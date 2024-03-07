@@ -1,7 +1,7 @@
 "use client";
-import { Button } from "@/components/ui/button"
-// import { CardTitle, CardHeader, CardContent, CardFooter, Card } from "@/components/ui/card"
-// import { TableCell, TableRow, TableBody, Table } from "@/components/ui/table"
+import { Button} from "../components/ui/button"
+// import { CardTitle, CardHeader, CardContent, CardFooter, Card } from "../../components/ui/card"
+// import { TableCell, TableRow, TableBody, Table } from "../../components/ui/table"
 import PriceBox from "./priceBox";
 import Hotels from "./hotels";
 import {React,useEffect,useState} from "react";

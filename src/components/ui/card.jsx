@@ -1,12 +1,12 @@
 import * as React from "react"
 
-import { cn } from "@/lib/utils"
+import { cn } from "../../lib/utils";
 
 const Card = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
     className={cn(
-      "rounded-lg border h-[28rem] border-gray-200 bg-white text-black shadow-lg dark:border-gray-300 dark:bg-white ",
+      "rounded-lg border h-auto border-gray-200 bg-white text-black shadow-lg dark:border-gray-300 dark:bg-white ",
       className
     )}
     {...props} />

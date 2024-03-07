@@ -1,15 +1,15 @@
 "use client";
 
-import Title from "@/components/heroTitle";
-import Navbar from "@/components/navbar";
+import Title from "../../components/heroTitle";
+import Navbar from "../../components/navbar";
 
 
 import {React,useEffect,useState} from "react";
-import Page from "@/components/page";
-import Footer from "@/components/footer";
+import Page from "../../components/page";
+import Footer from "../../components/footer";
 import { Hotel } from "lucide-react";
-import Hotels from "@/components/hotels";
-import PriceBox from "@/components/priceBox";
+import Hotels from "../../components/hotels";
+import PriceBox from "../../components/priceBox";
 
 
 

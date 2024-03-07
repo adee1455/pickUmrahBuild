@@ -5,8 +5,8 @@ import {
   SelectItem,
   SelectContent,
   Select,
-} from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
+} from "../components/ui/select";
+import { Input } from "../components/ui/input";
 import React, { useState } from "react";
 import { Calendar } from "primereact/calendar";
 
