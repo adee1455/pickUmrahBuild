@@ -1,11 +1,8 @@
-
+import React from "react"
 
 export default function Navbar() {
     return (
-      <div>
-
-
-
+<div>
 <nav class=" bg-white dark:border-gray">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-center md:justify-center lg:justify-between  mx-auto p-4">
     <a href="/" class="flex items-center  rtl:space-x-reverse">
@@ -15,18 +12,7 @@ export default function Navbar() {
     </a>
   
   </div>
-</nav>
-
-     
-        
-          
-       
-    
-  
-  
-        
-        
-        
+</nav>  
       </div>
     )
-    }
+    };

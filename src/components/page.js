@@ -50,6 +50,7 @@ export default function Page({tourName, tourAddr, stars, reviews, departDate, ar
       threeShare={threeShare} 
       childBed={childBed} 
       infant={infant} 
+      tourName={tourName}
         />
         </div>
 
@@ -105,6 +106,7 @@ export default function Page({tourName, tourAddr, stars, reviews, departDate, ar
         threeShare={threeShare} 
         childBed={childBed} 
         infant={infant} 
+        tourName={tourName}
         />
         
         </div>

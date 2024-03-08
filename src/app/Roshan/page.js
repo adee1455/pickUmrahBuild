@@ -1,10 +1,10 @@
 "use client";
 
 
-import Navbar from "@/components/navbar";
+import Navbar from "../../components/navbar";
 import {React,useEffect,useState} from "react";
-import Page from "@/components/page";
-import Footer from "@/components/footer";
+import Page from "../../components/page";
+import Footer from "../../components/footer";
 
 
 
