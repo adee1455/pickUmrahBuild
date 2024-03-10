@@ -102,19 +102,19 @@ console.log(tourName);
                     <span className="text-md font-semibold">How Likely are you to go?</span>
                 </div>
                 <div className="flex items-center justify-center gap-2  mb-4">
-                    <Input id="country-option-1" type="radio" name="choice" value="confirm" className="w-4 h-4 focus:outline-none dark:focus:outline-none   dark:bg-gray-700 dark:border-gray-600" />
+                    <Input id="country-option-1" type="radio" name="choice" value="less likely" className="w-4 h-4 focus:outline-none dark:focus:outline-none   dark:bg-gray-700 dark:border-gray-600" />
                     <label htmlFor="country-option-1" className="block ms-1  text-sm font-medium text-black dark:text-black ">
-                        Confirm
+                        Less Likely
                     </label>
 
-                    <Input id="country-option-2" type="radio" name="choice" value="thinking" className="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" />
+                    <Input id="country-option-2" type="radio" name="choice" value="likely" className="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" />
                     <label htmlFor="country-option-2" className="block ms-1  text-sm font-medium text-black dark:text-black ">
-                        Thinking
+                        Likely
                     </label>
 
-                    <Input id="country-option-3" type="radio" name="choice" value="planning" className="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" />
+                    <Input id="country-option-3" type="radio" name="choice" value="very likely" className="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" />
                     <label htmlFor="country-option-3" className="block ms-1  text-sm font-medium text-black dark:text-black ">
-                       Planning
+                       Very Likely
                     </label>
                 </div>
 
