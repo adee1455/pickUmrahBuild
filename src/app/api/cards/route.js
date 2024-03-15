@@ -4,7 +4,7 @@ import { query } from "../../../lib/db";
 export const GET = async (req, res) => {
   try {
     const results = await query({
-      query: "select * from card",
+      query: "select * from card LIMIT 5",
     });
 
     console.log(results);

@@ -176,10 +176,109 @@
 // }
 
 
+// "use client";
+// import Card from "./card";
+// import { React, useEffect, useState } from "react";
+
+// export default function CardsArea() {
+//   const [cards, setCards] = useState([]);
+//   const [loading, setLoading] = useState(false);
+//   const [page, setPage] = useState(1);
+//   const [hasMore, setHasMore] = useState(true);
+
+//   useEffect(() => {
+//     loadInitialCards();
+//   }, []);
+
+//   const loadInitialCards = async () => {
+//     setLoading(true);
+//     try {
+//       const response = await fetchCards(page);
+//       const data = await response.json();
+//       setCards(data);
+//       setPage(page + 1);
+//     } catch (error) {
+//       console.error("Error loading initial cards:", error);
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   const fetchCards = async (pageNum) => {
+//     const response = await fetch(`/api/cards?page=${pageNum}`);
+//     return response;
+//   };
+
+//   const handleScroll = () => {
+//     if (
+//       window.innerHeight + document.documentElement.scrollTop ===
+//         document.documentElement.offsetHeight &&
+//       !loading &&
+//       hasMore
+//     ) {
+//       loadMoreCards();
+//     }
+//   };
+
+//   const loadMoreCards = async () => {
+//     setLoading(true);
+//     try {
+//       const response = await fetchCards(page);
+//       const data = await response.json();
+//       if (data.length === 0) {
+//         setHasMore(false);
+//       } else {
+//         setCards((prevCards) => [...prevCards, ...data]);
+//         setPage(page + 1);
+//       }
+//     } catch (error) {
+//       console.error("Error loading more cards:", error);
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   useEffect(() => {
+//     window.addEventListener("scroll", handleScroll);
+//     return () => {
+//       window.removeEventListener("scroll", handleScroll);
+//     };
+//   }, [loading, hasMore]);
+
+//   return (
+//     <div className="h-auto w-full flex bg-white flex-col justify-center pt-5">
+//       <div className="flex justify-center flex-col mx-auto">
+//         {cards.map((card, index) => (
+//           <Card key={index} 
+//           tourName={card.tourname}
+//           tourCity={card.touradd}
+//           ratings={card.tourratings}
+//           departDate={card.departdate}
+//           arrivalDate={card.arrivaldate}
+//           location={card.departlocation}
+//           price={card.price}
+//           days={card.days}
+//           type={card.type}
+//           btnLink={card.btnlink}
+//           makkahHotel={card.makkahhotel}
+//           madinahHotel={card.madinahhotel}
+//           makkahHotel2={card.makkahhotel2}
+//           madinahHotel2={card.madinahhotel2}
+//           stars={card.stars}
+//           makkahDist={card.makkahdist}
+//           madinahDist={card.madinahdist}
+//           />
+//         ))}
+//         {loading && <p>Loading...</p>}
+//         {!loading && !hasMore && <p>End</p>}
+//       </div>
+//     </div>
+//   );
+// }
+
 "use client";
 import Card from "./card";
 import { React, useEffect, useState } from "react";
-
 export default function CardsArea() {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -195,8 +294,12 @@ export default function CardsArea() {
     try {
       const response = await fetchCards(page);
       const data = await response.json();
-      setCards(data);
-      setPage(page + 1);
+      if (data.length === 0) {
+        setHasMore(false); // No more cards available
+      } else {
+        setCards(data);
+        setPage(page + 1);
+      }
     } catch (error) {
       console.error("Error loading initial cards:", error);
     } finally {
@@ -226,7 +329,7 @@ export default function CardsArea() {
       const response = await fetchCards(page);
       const data = await response.json();
       if (data.length === 0) {
-        setHasMore(false);
+        setHasMore(false); // No more cards available
       } else {
         setCards((prevCards) => [...prevCards, ...data]);
         setPage(page + 1);
@@ -250,23 +353,23 @@ export default function CardsArea() {
       <div className="flex justify-center flex-col mx-auto">
         {cards.map((card, index) => (
           <Card key={index} 
-          tourName={card.tourname}
-          tourCity={card.touradd}
-          ratings={card.tourratings}
-          departDate={card.departdate}
-          arrivalDate={card.arrivaldate}
-          location={card.departlocation}
-          price={card.price}
-          days={card.days}
-          type={card.type}
-          btnLink={card.btnlink}
-          makkahHotel={card.makkahhotel}
-          madinahHotel={card.madinahhotel}
-          makkahHotel2={card.makkahhotel2}
-          madinahHotel2={card.madinahhotel2}
-          stars={card.stars}
-          makkahDist={card.makkahdist}
-          madinahDist={card.madinahdist}
+            tourName={card.tourname}
+            tourCity={card.touradd}
+            ratings={card.tourratings}
+            departDate={card.departdate}
+            arrivalDate={card.arrivaldate}
+            location={card.departlocation}
+            price={card.price}
+            days={card.days}
+            type={card.type}
+            btnLink={card.btnlink}
+            makkahHotel={card.makkahhotel}
+            madinahHotel={card.madinahhotel}
+            makkahHotel2={card.makkahhotel2}
+            madinahHotel2={card.madinahhotel2}
+            stars={card.stars}
+            makkahDist={card.makkahdist}
+            madinahDist={card.madinahdist}
           />
         ))}
         {loading && <p>Loading...</p>}
