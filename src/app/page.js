@@ -1,33 +1,49 @@
-import React from "react"
-import Screen from "../components/screen"
-// import Navbar from "../../components/navbar";
-import Navbar from "../components/navbar"
-import Title from "../components/heroTitle"
-import SearchBar from "../components/searchBar"
-import CardsArea from "../components/cardsArea"
-import Footer from "../components/footer"
+"use client";
 
-
-
-
+import { useState } from "react";
+import Navbar from "../components/navbar";
+import Title from "../components/heroTitle";
+import SearchBar from "../components/searchBar";
+import CardsArea from "../components/cardsArea";
+import Footer from "../components/footer";
 
 
 
 export default function Home() {
+  
+  const [filterOption, setFilterOption] = useState("all");
+  const [sortOption, setSortOption] = useState("default"); // Default sort option
+  const [month,setMonth] = useState("default");
+  const [searchKey,setSearchKey] = useState("");
+
+  const handleSearch = (query) => {
+    setSearchKey(query);
+    console.log("Search query:", query);
+  };
+
+  const handleMonthChange = (month) =>{
+    setMonth(month);
+    console.log(month)
+  }
+
+  const handleLocation = (filter) => {
+    setFilterOption(filter);
+    console.log(filter);
+  };
+
+  const handleSortChange = (sort) => {
+    setSortOption(sort);
+    console.log(sort);
+  };
+
   return (
     <div>
-       <Navbar/>
-       <Title/>
-       <SearchBar/>
-      <CardsArea/>
-      <Footer/>
-     
-
-
-      
-      
-      
+      <Navbar />
+      <Title />
+      <SearchBar   handleSearch={handleSearch} handleLocation={handleLocation} handleSortChange={handleSortChange} handleMonthChange={handleMonthChange} />
+      <CardsArea   searchKey={searchKey} filterOption={filterOption} sortOption={sortOption} month={month} />
+      <Footer />
     </div>
-  )
-  }
+  );
+}
 
