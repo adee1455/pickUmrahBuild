@@ -10,7 +10,7 @@ import Footer from "../components/footer";
 
 
 export default function Home() {
-  
+
   const [filterOption, setFilterOption] = useState("all");
   const [sortOption, setSortOption] = useState("default"); // Default sort option
   const [month,setMonth] = useState("default");

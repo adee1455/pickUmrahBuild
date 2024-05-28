@@ -1,46 +1,4 @@
 
-// import { NextResponse } from "next/server";
-// import { query } from "../../../lib/db";
-
-// export const GET = async (req, res, filterOption) => {
-//   try {
-//     const results = await query({
-//       query: `select * from card  `
-//     });
- 
-
-//     console.log(results);
-
-//     return NextResponse.json(results);
-//   } catch (e) {
-//     return NextResponse.json({ message: e.message }, { status: 500 });
-//   }
-// };
-
-// import { NextResponse } from "next/server";
-// import { query } from "../../../lib/db";
-
-// export const GET = async (req) => {
-//   const { searchParams } = new URL(req.url);
-//   const location = searchParams.get('location') || 'Mumbai'; // Default to 'Delhi' if no location is provided
-
-//   console.log('Location parameter:', location); // Add this line for debugging
-
-//   try {
-//     const results = await query({
-//       query: `SELECT * FROM card WHERE departlocation = ?`,
-//       values: [location],
-//     });
-
-//     console.log("Database results:", results);
-//     return NextResponse.json(results);
-//   } catch (e) {
-//     console.error("Error in GET request:", e);
-//     return NextResponse.json({ message: e.message }, { status: 500 });
-//   }
-// };
-
-
 import { NextResponse } from "next/server";
 import { query } from "../../../lib/db";
 
@@ -103,3 +61,4 @@ export const GET = async (req) => {
     return NextResponse.json({ message: e.message }, { status: 500 });
   }
 };
+
