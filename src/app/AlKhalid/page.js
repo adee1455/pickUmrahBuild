@@ -5,18 +5,25 @@ import Navbar from "../../components/navbar";
 
 
 import {React,useEffect,useState} from "react";
-import Page from "../../components/page";
+// import Page from "../../components/tourPage";
 import Footer from "../../components/footer";
 import { Hotel } from "lucide-react";
 import Hotels from "../../components/hotels";
 import PriceBox from "../../components/priceBox";
+import dynamic from 'next/dynamic';
+
+// Example of dynamically importing a component
+const DynamicComponent = dynamic(() => import('../../components/tourPage'), {
+  loading: () => <p>Loading...</p>,
+  ssr: false, // Disable server-side rendering
+});
 
 
 
 
 
 
-export default function page() {
+export default function AlKhalidPage() {
 
   useEffect(() => {
     console.log("Hello");
@@ -45,7 +52,7 @@ const selectedTour = data.find(item => item.tourname === "AL-KHALID TOURS" );
          </div>
          {selectedTour && (
           <>
-        <Page
+        <DynamicComponent
         tourName={selectedTour.tourname}
         tourAddr={selectedTour.touradd}
         stars={selectedTour.tourstars}

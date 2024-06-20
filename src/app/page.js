@@ -6,6 +6,13 @@ import Title from "../components/heroTitle";
 import SearchBar from "../components/searchBar";
 import CardsArea from "../components/cardsArea";
 import Footer from "../components/footer";
+import dynamic from 'next/dynamic';
+
+// Example of dynamically importing a component
+const DynamicComponent = dynamic(() => import('../components/cardsArea'), {
+  loading: () => <p>Loading...</p>,
+  ssr: false, // Disable server-side rendering
+});
 
 
 
@@ -41,9 +48,9 @@ export default function Home() {
       <Navbar />
       <Title />
       <SearchBar   handleSearch={handleSearch} handleLocation={handleLocation} handleSortChange={handleSortChange} handleMonthChange={handleMonthChange} />
-      <CardsArea   searchKey={searchKey} filterOption={filterOption} sortOption={sortOption} month={month} />
+      {/* <CardsArea  /> */} 
+      <DynamicComponent searchKey={searchKey} filterOption={filterOption} sortOption={sortOption} month={month} />
       <Footer />
     </div>
   );
 }
-
