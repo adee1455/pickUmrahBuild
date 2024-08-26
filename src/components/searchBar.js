@@ -54,7 +54,7 @@ export default function SearchBar({handleLocation,handleSortChange,handleMonthCh
 
 
   return (
-    <div className="max-w-4xl mx-auto border rounded-md border-black dark:bg-white bg-white shadow-lg p-2 mt-4 flex flex-col sm:flex-row">
+    <div className="max-w-4xl sm:mx-auto mx-3 border rounded-md border-black dark:bg-white bg-white shadow-lg p-2 mt-4 flex flex-col sm:flex-row">
      <div className="flex sm:border-none border-b border-black">
       <div className="flex flex-1 justify-center text-black sm:justify-start ">
       <Select value={selectedValue} onValueChange={handleSelectChange}  className="w-full sm:w-auto">
