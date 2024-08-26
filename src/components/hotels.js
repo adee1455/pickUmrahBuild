@@ -14,7 +14,7 @@ export default function Hotels({makkahHotel, madinahHotel, makkahHotelstars, mad
           </div>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:justify-normal md:justify-center lg:grid-cols-2 gap-4">
             <img
-              alt="Le Meredien Makkah"
+              alt="makkah Hotel"
               className="rounded-lg"
               
               src={makkahPic}
@@ -44,7 +44,7 @@ export default function Hotels({makkahHotel, madinahHotel, makkahHotelstars, mad
           </div>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
             <img
-              alt="Royal Al Nokbah"
+              alt="madinah Hotel"
               className="rounded-lg"
               
               src={madinahPic}

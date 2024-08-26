@@ -88,11 +88,11 @@ export default function Page({tourName, tourAddr, stars, reviews, departDate, ar
              
               <li className="flex items-center space-x-4">
                 <BriefcaseIcon className="text-gray-600" />
-                <span className={linethrough}>TCS</span>
+                <span className="line-through">TCS</span>
               </li>
               <li className="flex items-center space-x-4">
                 <CarTaxiFrontIcon className="text-gray-600" />
-                <span className={linethrough}>Individual Transfer</span>
+                <span className="line-through">Individual Transfer</span>
               </li>
             </ul>
           </div>

@@ -56,7 +56,7 @@ export default function SearchBar({handleLocation,handleSortChange,handleMonthCh
   return (
     <div className="max-w-4xl mx-auto border rounded-md border-black dark:bg-white bg-white shadow-lg p-2 mt-4 flex flex-col sm:flex-row">
      <div className="flex sm:border-none border-b border-black">
-      <div className="flex flex-1 justify-center text-black sm:justify-start">
+      <div className="flex flex-1 justify-center text-black sm:justify-start ">
       <Select value={selectedValue} onValueChange={handleSelectChange}  className="w-full sm:w-auto">
       <SelectTrigger id="location" className="text-black w-full sm:w-64">
         <SelectValue placeholder="Departure Location" />
@@ -74,10 +74,10 @@ export default function SearchBar({handleLocation,handleSortChange,handleMonthCh
       <div className="flex flex-1 justify-center mt-0 sm:mt-0">
         <React.StrictMode>
           <PrimeReactProvider>
-            <div className="card sm:border-r border-black flex justify-content-center sm:mx-3 mx-0 p-3 ">
+            <div className="card sm:border-r border-black flex justify-content-center sm:mx-3 mx-0 p-3 focus:ring-0 focus:ring-offset-transparent focus:outline-none focus:border-none">
               <Calendar
                 
-                className="text-black"
+                className="text-black focus:outline-none"
                 placeholder="Month"
                 value={selMonth}
                 onChange={handleMonth}
