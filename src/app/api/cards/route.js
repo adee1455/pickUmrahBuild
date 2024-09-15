@@ -16,7 +16,7 @@ export const GET = async (req) => {
   console.log('Search key:', searchKey);
 
   try {
-    let queryStr = `SELECT * FROM card WHERE 1`;
+    let queryStr = `SELECT * FROM cardtable WHERE 1`;
 
     if (location !== 'all') {
       queryStr += ` AND departlocation = ?`;

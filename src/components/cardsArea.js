@@ -12,7 +12,7 @@ const DynamicComponent = dynamic(() => import('../components/card'), {
 
 
 export default function CardsArea({filterOption, sortOption, month, searchKey}) {
-  const [cards, setCards] = useState([]);
+  const [ cards, setCards] = useState([]);
   const [loading, setLoading] = useState(false);
   const [pages, setPages] = useState({});
   const [hasMore, setHasMore] = useState(true);

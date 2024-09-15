@@ -43,7 +43,7 @@ const getData = async () => {
 };
 
 // Define your condition for selecting a specific item
-const selectedTour = data.find(item => item.tourname === "AL-KHALID TOURS" );
+const selectedTour = data.find(item => item.tourname === "AL-KHALID TOURS1" );
 
     return (
       <div>
