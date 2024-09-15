@@ -7,7 +7,7 @@ export default function ShareButton({link}){
         await navigator.share({
           title: 'Check out this awesome Package!',
           text: 'I found this really interesting and thought you might like it too.',
-          url: `https://test.pickumrah.com${link}` || `https://pickumrah.com${link}`,
+          url: `https://www.pickumrah.com${link}` || `https://pickumrah.com${link}`,
         });
         console.log('Content shared successfully!');
         console.log(link);
