@@ -1,9 +1,6 @@
 "use client";
-
 import Title from "../../components/heroTitle";
 import Navbar from "../../components/navbar";
-
-
 import {React,useEffect,useState} from "react";
 // import Page from "../../components/tourPage";
 import Footer from "../../components/footer";
@@ -17,19 +14,12 @@ const DynamicComponent = dynamic(() => import('../../components/tourPage'), {
   loading: () => <p>Loading...</p>,
   ssr: false, // Disable server-side rendering
 });
-
-
-
-
-
-
 export default function AlKhalidPage() {
 
   useEffect(() => {
     console.log("Hello");
     getData();
 }, []);
-
 const [data, setData] = useState([]);
 
 const getData = async () => {
@@ -43,7 +33,7 @@ const getData = async () => {
 };
 
 // Define your condition for selecting a specific item
-const selectedTour = data.find(item => item.tourname === "AL-KHALID TOURS1" );
+const selectedTour = data.find(item => item.tour === "alkhalid4" );
 
     return (
       <div>
@@ -59,7 +49,7 @@ const selectedTour = data.find(item => item.tourname === "AL-KHALID TOURS1" );
         reviews={selectedTour.reviews}
         departDate={selectedTour.departdate}
         arrivalDate={selectedTour.arrivaldate}
-        location={selectedTour.location}
+        location={selectedTour.departlocation}
         twoShare={selectedTour.twoshare}
         threeShare={selectedTour.threeshare}
         fourShare={selectedTour.fourshare}
@@ -67,22 +57,21 @@ const selectedTour = data.find(item => item.tourname === "AL-KHALID TOURS1" );
         infant={selectedTour.infant}
         linethrough={selectedTour.linethrough}
         days={selectedTour.days}
-        makkahHotel={selectedTour.makkahhotel}
-        madinahHotel={selectedTour.madinahhotel}
+        makkahHotel={selectedTour.Makkahhoteltour}
+        madinahHotel={selectedTour.Madinahhoteltour}
         makkahHotelstars={selectedTour.makkahhotelstars}
         madinahHotelstars={selectedTour.madinahhotelstars}
         makkahPic={selectedTour.makkahpic}
         madinahPic={selectedTour.madinahpic}
-        makkahDist={selectedTour.makkahhoteldist}
-        madinahDist={selectedTour.madinahhoteldist}
+        makkahDist={selectedTour.makkahdist}
+        madinahDist={selectedTour.madinahdist}
         makkahMap={selectedTour.makkahmap}
         madinahMap={selectedTour.madinahmap}
         /> 
-          
 
         </>
-
         )}
+
         <Footer/>
          
 
@@ -90,3 +79,5 @@ const selectedTour = data.find(item => item.tourname === "AL-KHALID TOURS1" );
       </div>
     )
     }
+  
+  

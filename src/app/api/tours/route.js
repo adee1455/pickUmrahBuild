@@ -5,7 +5,7 @@ import { query } from "../../../lib/db";
 export const GET = async (req, res) => {
   try {
     const results = await query({
-      query: "select * from tourPage",
+      query: "select * from mainTable",
     });
 
     console.log(results);

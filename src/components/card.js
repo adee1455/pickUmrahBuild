@@ -17,6 +17,8 @@ export default function Card({tourName,tourCity,departDate,arrivalDate,location,
 
     const router = useRouter();
     const link = btnLink;
+
+     
         return(
         <Provider apiKey="pt_1bccdd0061064d58e0d77f201e496b">
         <div className="sm:w-7xl w-auto  h-54 bg-white shadow-md flex flex-row border border-black font-sans mx-auto mt-1 mb-10 " >

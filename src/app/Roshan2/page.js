@@ -38,7 +38,7 @@ const getData = async () => {
 };
 
 // Define your condition for selecting a specific item
-const selectedTour = data.find(item => item.tourname === "ROSHAN TOURS" );
+const selectedTour = data.find(item => item.tour === "roshan2" );
 
     return (
       <div>
@@ -47,14 +47,14 @@ const selectedTour = data.find(item => item.tourname === "ROSHAN TOURS" );
          </div>
          {selectedTour && (
           <>
-        <DynamicComponent
+         <DynamicComponent
         tourName={selectedTour.tourname}
         tourAddr={selectedTour.touradd}
         stars={selectedTour.tourstars}
         reviews={selectedTour.reviews}
         departDate={selectedTour.departdate}
         arrivalDate={selectedTour.arrivaldate}
-        location={selectedTour.location}
+        location={selectedTour.departlocation}
         twoShare={selectedTour.twoshare}
         threeShare={selectedTour.threeshare}
         fourShare={selectedTour.fourshare}
@@ -62,14 +62,14 @@ const selectedTour = data.find(item => item.tourname === "ROSHAN TOURS" );
         infant={selectedTour.infant}
         linethrough={selectedTour.linethrough}
         days={selectedTour.days}
-        makkahHotel={selectedTour.makkahhotel}
-        madinahHotel={selectedTour.madinahhotel}
+        makkahHotel={selectedTour.Makkahhoteltour}
+        madinahHotel={selectedTour.Madinahhoteltour}
         makkahHotelstars={selectedTour.makkahhotelstars}
         madinahHotelstars={selectedTour.madinahhotelstars}
         makkahPic={selectedTour.makkahpic}
         madinahPic={selectedTour.madinahpic}
-        makkahDist={selectedTour.makkahhoteldist}
-        madinahDist={selectedTour.madinahhoteldist}
+        makkahDist={selectedTour.makkahdist}
+        madinahDist={selectedTour.madinahdist}
         makkahMap={selectedTour.makkahmap}
         madinahMap={selectedTour.madinahmap}
         /> 
