@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-import { Tour } from '../../../types/index.js'; // Ensure you have the correct path to your Tour type
-import { Button } from '../../../components/ui/button.jsx';
+import { Tour } from '../../../types/index.js';
+import { Button } from '../../../components/ui/button';
 import { useRouter } from 'next/navigation';
-import PriceBox from '../../../components/priceBox.js'
-import Hotels from '../../../components/hotels.js'
+import PriceBox from '../../../components/priceBox'
+import Hotels from '../../../components/hotels'
 
 
 interface TourPageProps {
