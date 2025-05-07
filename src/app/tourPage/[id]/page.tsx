@@ -20,7 +20,7 @@ export default function Page({ params }: TourPageProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
   const router = useRouter();
-console.log(id);
+console.log(id)
   const fetchTour = async () => {
     try {
       const response = await fetch(`/api/tours?id=${id}`);
