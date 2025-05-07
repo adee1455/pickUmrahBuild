@@ -1,34 +1,33 @@
-export interface Tour{
+export interface Tour {
     id: number;
     recommended: string;
-    tourName: string;
-    tourAddr: string;
-    departDate: string;
-    arrivalDate: string;
-    departLocation: string;
+    tourname: string;
+    touradd: string;
+    departdate: string;
+    arrivaldate: string;
+    departlocation: string;
     price: string;
     days: number;
     type: string;
-    btnLink: string;
     stars: number;
-    makkahDist: string;
-    madinahDist: string;
-    monthYear: string;
-    tourAddr2: string;
-    tourStars: number;
+    makkahdist: string;
+    madinahdist: string;
+    monthyear: string;
+    touradd2: string;
+    tourstars: number;
     reviews: number;
-    twoShare: string;
-    threeShare: string;
-    fourShare: string;
-    childBed: string;
+    twoshare: string;
+    threeshare: string;
+    fourshare: string;
+    childbed: string;
     infant: string;
-    makkahHotelTour: string;
-    madinahHotelTour: string;
-    makkahHotelStars: number;
-    madinahHotelStars: number;
-    makkahPic: string;
-    madinahPic: string;
-    makkahMap: string;
-    madinahMap: string;
+    Makkahhoteltour: string;
+    Madinahhoteltour: string;
+    makkahhotelstars: number;
+    madinahhotelstars: number;
+    makkahpic: string;
+    madinahpic: string;
+    makkahmap: string;
+    madinahmap: string;
 }
 

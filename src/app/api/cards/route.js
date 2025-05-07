@@ -1,6 +1,6 @@
 
 import { NextResponse } from "next/server";
-import { query } from "../../../lib/db";
+const { query } = require('../../../lib/db.cjs');
 
 export const GET = async (req) => {
   

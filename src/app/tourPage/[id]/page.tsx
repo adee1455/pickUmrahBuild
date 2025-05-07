@@ -8,11 +8,11 @@ import Hotels from '../../../components/hotels'
 
 
 interface TourPageProps {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }
 
 export default function Page({ params }: TourPageProps) {
-  const { id } = React.use(params);
+  const { id } = params;
 
   const [tour, setTour] = useState<Tour | null>(null);
   const [loading, setLoading] = useState(true);
@@ -20,10 +20,10 @@ export default function Page({ params }: TourPageProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
   const router = useRouter();
-
+console.log(id);
   const fetchTour = async () => {
     try {
-      const response = await fetch(`/api/tourPage?id=${id}`);
+      const response = await fetch(`/api/tours?id=${id}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -69,9 +69,9 @@ export default function Page({ params }: TourPageProps) {
     (<div className="max-w-8xl lg:mx-20 md:mx-10 mx-3  md:py-12 py-5 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="lg:grid lg:grid-cols-3 ">
         <div className="md:col-span-2 col-span-3 max-w-8xl">
-          <h1 className="md:text-4xl text-[26px] font-bold text-black">{tour?.tourName}</h1>
+          <h1 className="md:text-4xl text-[26px] font-bold text-black">{tour?.tourname}</h1>
           <p className="md:text-md text-sm md:w-full w-64 text-gray-500">
-            {tour?.tourAddr}, Maharashtra, India <span className="text-yellow-600 md:pl-5 pl-1">★ {tour?.stars}</span> · {tour?.reviews} reviews
+            {tour?.touradd}, Maharashtra, India <span className="text-yellow-600 md:pl-5 pl-1">★ {tour?.stars}</span> · {tour?.reviews} reviews
           </p>
           <div className="mt-6 max-w-3xl flex lg:flex-row md:flex-row flex-row md:justify-around   items-center font-semibold space-x-2">
             <div className="">
@@ -81,29 +81,29 @@ export default function Page({ params }: TourPageProps) {
             <div className="flex items-center flex-row  space-x-2">
               <div className="flex items-center ">
               <CalendarIcon className="text-gray-600" />
-              <span className="pl-3 w-full">{tour?.departDate}</span>  
+              <span className="pl-3 w-full">{tour?.departdate}</span>  
               </div>
               <span className="px-0">|</span> 
               <div className="flex items-center ">
               <PlaneTakeoffIcon className="text-gray-600 ml-2" />
-              <span className="pl-3 w-full">{tour?.arrivalDate}</span>
+              <span className="pl-3 w-full">{tour?.arrivaldate}</span>
               </div>
             </div>
 
             <div className="  ">
-                <p className="md:text-lg text-sm md:pl-3">Departure Location: {tour?.departLocation}</p>
+                <p className="md:text-lg text-sm md:pl-3">Departure Location: {tour?.departlocation}</p>
             </div>
           </div>
           </div>
 
           <div className="lg:hidden md:block block pt-10">
         <PriceBox 
-      fourShare={tour?.fourShare}
-      twoShare={tour?.twoShare} 
-      threeShare={tour?.threeShare} 
-      childBed={tour?.childBed} 
+      fourShare={tour?.fourshare}
+      twoShare={tour?.twoshare} 
+      threeShare={tour?.threeshare} 
+      childBed={tour?.childbed} 
       infant={tour?.infant} 
-      tourName={tour?.tourName}
+      tourName={tour?.tourname}
         />
         </div>
 
@@ -154,28 +154,28 @@ export default function Page({ params }: TourPageProps) {
         <div className="lg:block md:hidden hidden">
       
         <PriceBox
-        fourShare={tour?.fourShare}
-        twoShare={tour?.twoShare} 
-        threeShare={tour?.threeShare} 
-        childBed={tour?.childBed} 
+        fourShare={tour?.fourshare}
+        twoShare={tour?.twoshare} 
+        threeShare={tour?.threeshare} 
+        childBed={tour?.childbed} 
         infant={tour?.infant} 
-        tourName={tour?.tourName}
+        tourName={tour?.tourname}
         />
         
         </div>
       
       <div className="w-full">
         <Hotels
-         makkahHotel={tour?.makkahHotelTour}
-         madinahHotel={tour?.madinahHotelTour}
-         makkahHotelstars={tour?.makkahHotelStars}
-         madinahHotelstars={tour?.madinahHotelStars}
-         makkahPic={tour?.makkahPic}
-         madinahPic={tour?.madinahPic}
-         makkahDist={tour?.makkahDist}
-         madinahDist={tour?.madinahDist}
-         makkahMap={tour?.makkahMap}
-         madinahMap={tour?.madinahMap}
+         makkahHotel={tour?.Makkahhoteltour}
+         madinahHotel={tour?.Madinahhoteltour}
+         makkahHotelstars={tour?.makkahhotelstars}
+         madinahHotelstars={tour?.madinahhotelstars}
+         makkahPic={tour?.makkahpic}
+         madinahPic={tour?.madinahpic}
+         makkahDist={tour?.makkahdist}
+         madinahDist={tour?.madinahdist}
+         makkahMap={tour?.makkahmap}
+         madinahMap={tour?.madinahmap}
         />
       </div>
        
