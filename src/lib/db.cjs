@@ -26,10 +26,7 @@ const createPool = async () => {
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,
-    connectTimeout: 10000,
-    ssl: {
-      rejectUnauthorized: false
-    }
+    connectTimeout: 10000
   });
 };
 
